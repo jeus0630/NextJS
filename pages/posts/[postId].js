@@ -21,13 +21,13 @@ export const getStaticPaths = async () => {
     return {
         paths : [
             {
-                params : {postId : 1}
+                params : {postId : '1'}
             },
             {
-                params : {postId : 2}
+                params : {postId : '2'}
             },
             {
-                params : {postId : 3}
+                params : {postId : '3'}
             }
         ],
         fallback : 'blocking'
@@ -48,7 +48,7 @@ export const getStaticProps = async (context) => {
 
     return {
         props : {
-            post : data.slice(0,3)
+            post : data
         }
     }
 }
